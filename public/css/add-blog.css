@@ -1,0 +1,127 @@
+/* Styling the add-blog */
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 130vh;
+  width: 100%;
+}
+
+/* languages */
+#languages {
+  width: 300px;
+  height: auto;
+  min-height: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  background-color: #333;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: var(--white-color);
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* When focused */
+#languages:focus {
+  border-color: var(--white-color);
+}
+
+/* Individual option styling */
+#languages option {
+  padding: 8px;
+  border-radius: 6px;
+  margin: 2px 0;
+}
+
+/* Hover/selected states */
+#languages option:hover {
+  background-color: var(--gray-color);
+  color: white;
+}
+
+#languages option:checked {
+  background-color: var(--gray-color);
+  color: white;
+}
+
+.blogs {
+  min-width: 60vw;
+  text-align: start;
+}
+
+.blogs .input {
+  width: 100%;
+  caret-color: orangered;
+}
+
+.blogs .btn {
+  width: 100%;
+}
+
+.blogs .form {
+  align-items: start;
+}
+
+.extra-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.extra-container select {
+  padding: 10px 10px;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(0, 0, 0, 0.2)
+  );
+  color: var(--white-color);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.lang {
+  margin: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+
+.recommends {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0px;
+}
+
+@media (max-width: 992px) {
+  .blog-container {
+    min-height: 120vh;
+  }
+}
+@media (max-width: 768px) {
+  .blog-container {
+    min-height: 110vh;
+  }
+
+  .blogs {
+    min-width: 90vw;
+  }
+}

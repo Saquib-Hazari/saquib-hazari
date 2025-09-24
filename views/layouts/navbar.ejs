@@ -1,0 +1,99 @@
+<%- include('scripts') %>
+<header>
+  <% if (flashMessage) { %>
+  <div class="flash-message"><%= flashMessage %></div>
+  <% } %>
+  <div class="navbar">
+    <div class="logo"><a href="/">Saquib hazari</a></div>
+    <% if (authenticatedToken) { %>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="/api/add-blog">Add Blog</a></li>
+      <li><a href="/api/services">Services</a></li>
+      <li><a href="/api/contact">Contacts</a></li>
+    </ul>
+    <a class="action_btn btn-white" href="/api/user/logout">Logout</a>
+    <% } else { %>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="/api/services">Services</a></li>
+      <li><a href="/api/contact">Contacts</a></li>
+    </ul>
+    <a class="action_btn btn-white" href="/api/user/login">Login</a>
+    <%}%>
+
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+  <div class="dropdownMenu">
+    <% if (authenticatedToken) { %>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="/api/add-blog">Add Blog</a></li>
+      <li><a href="/api/services">Services</a></li>
+      <li><a href="/api/contact">Contacts</a></li>
+      <hr />
+      <li><a class="btn-white" href="/api/user/logout">Logout</a></li>
+    </ul>
+    <% } else{ %>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="/api/services">Services</a></li>
+      <li><a href="/contacts">Contacts</a></li>
+      <hr />
+      <li><a class="btn-white" href="/api/user/login">Login</a></li>
+    </ul>
+    <%}%>
+  </div>
+</header>
+<script>
+  const toggleBtn = document.querySelector(".toggle_btn");
+  const toggleBtnIcon = document.querySelector(".toggle_btn i");
+  const dropdownMenu = document.querySelector(".dropdownMenu");
+
+  // Toggle dropdown on button click
+  toggleBtn.onclick = function (e) {
+    e.stopPropagation(); // prevent document click from firing
+    dropdownMenu.classList.toggle("open");
+    const isOpen = dropdownMenu.classList.contains("open");
+
+    // add rotation animation
+    toggleBtnIcon.classList.add("rotate");
+
+    setTimeout(() => {
+      toggleBtnIcon.className = isOpen
+        ? "fa-solid fa-xmark rotate"
+        : "fa-solid fa-bars rotate";
+    }, 150); // wait for half rotation
+
+    // reset rotate after animation ends
+    setTimeout(() => {
+      toggleBtnIcon.classList.remove("rotate");
+    }, 300);
+  };
+
+  // Collapse dropdown if clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      dropdownMenu.classList.contains("open") &&
+      !dropdownMenu.contains(e.target) &&
+      !toggleBtn.contains(e.target)
+    ) {
+      dropdownMenu.classList.remove("open");
+
+      // also reset icon back to bars
+      toggleBtnIcon.classList.add("rotate");
+      setTimeout(() => {
+        toggleBtnIcon.className = "fa-solid fa-bars rotate";
+      }, 150);
+      setTimeout(() => {
+        toggleBtnIcon.classList.remove("rotate");
+      }, 300);
+    }
+  });
+</script>

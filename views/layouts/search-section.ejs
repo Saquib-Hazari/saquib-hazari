@@ -1,0 +1,22 @@
+<div class="button-activities">
+  <div class="filter-buttons">
+    <a
+      href="/"
+      class="btn-filter <%= !showRecent ? 'active' : '' %>"
+      id="showAll"
+      >Show All</a
+    >
+    <a
+      href="/?recent=true"
+      class="btn-filter <%= showRecent ? 'active' : '' %>"
+      id="recentBtn"
+      >Recent</a
+    >
+  </div>
+  <div class="searchBar">
+    <input class="input" type="text" id="searchInput" placeholder="Search..." />
+    <a class="searchBtn" id="searchBtn"
+      ><i class="fa-solid fa-arrow-right"></i
+    ></a>
+  </div>
+</div>

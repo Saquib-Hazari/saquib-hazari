@@ -1,0 +1,16 @@
+node_modules/
+.todo
+*.logs
+logs/
+.env
+*.env
+
+
+.DS_Store
+.vscode
+dist/
+build/
+*.temp
+*.swp
+*.todo
+.todo

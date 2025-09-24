@@ -1,0 +1,125 @@
+/* Designing services */
+.service-container {
+  /* height: 100vh; */
+  margin: 3rem auto;
+  width: 100%;
+}
+
+.service-container h1 {
+  font-size: 100px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+#frontend-development li {
+  list-style-type: disc;
+  margin-left: 30px;
+  font-size: 18px;
+  line-height: 2;
+}
+#frontend-development ul {
+  color: var(--gray-color);
+  margin-bottom: 40px;
+}
+
+#frontend-development h2 {
+  font-size: 45px;
+}
+
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.general {
+  height: 600px;
+  width: 500px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.general .heading1 {
+  font-size: 70px;
+  margin: 25px;
+}
+
+.general li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+  margin: 20px auto;
+  color: var(--gray-color);
+}
+
+.general a {
+  position: absolute;
+  bottom: 30px;
+}
+
+/* Frequently asked questions */
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  padding: 40px;
+}
+
+.faq-section h1 {
+  margin-bottom: 100px;
+}
+
+.faq {
+  width: 100%;
+}
+
+.faq-section h3 {
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-section p {
+  font-size: 18px;
+}
+
+.faq-section img {
+  height: 50px;
+  width: 50px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 0;
+}
+
+.faq-answer.show {
+  max-height: 200px;
+  padding: 10px 0;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.faq-section .rotate {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 992px) {
+  .service-container {
+    margin: 10rem auto;
+  }
+  .pricing {
+    display: flex;
+    flex-direction: column;
+  }
+}

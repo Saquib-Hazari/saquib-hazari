@@ -1,0 +1,100 @@
+/* Creating the explore section */
+.explore-section {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.explore-section .sub-heading {
+  text-align: start;
+}
+.explore-section .para {
+  text-align: start;
+  color: var(--gray-color);
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(0, 0, 0, 0.1)
+  );
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 600px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.cards .para {
+  text-align: center;
+  margin-top: 7px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-logo {
+  background: linear-gradient(
+    135deg,
+    rgba(32, 133, 164, 0.5),
+    rgba(0, 117, 180, 0.2)
+  );
+
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 144, 255, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.git-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-container {
+    margin: 10px;
+  }
+}

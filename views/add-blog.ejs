@@ -1,0 +1,89 @@
+<%- include( './layouts/links') %> <%- include('./layouts/navbar') %>
+<div class="blog-container">
+  <div class="blogs">
+    <form class="form" action="/api/add-blog" method="POST">
+      <h1 class="heading2">Add new blog</h1>
+      <input
+        class="input"
+        type="text"
+        name="title"
+        placeholder="Add Title"
+        required
+      />
+
+      <input
+        class="input"
+        type="text"
+        name="subtitle"
+        placeholder="Add subtitle"
+        required
+      />
+      <textarea
+        class="input"
+        type="text"
+        name="description"
+        placeholder="Add description as Markdown"
+        rows="10"
+        required
+      ></textarea>
+      <div class="extra-container">
+        <div class="flex">
+          <label>
+            <input
+              class="small-para"
+              type="checkbox"
+              name="tools"
+              value="docker"
+            />
+            Docker
+          </label>
+          <label>
+            <input
+              class="small-para"
+              type="checkbox"
+              name="tools"
+              value="git"
+            />
+            Git
+          </label>
+        </div>
+        <!-- Multi language dropdown for language -->
+        <label class="small-para" for="languages"
+          >Select Languages/Tech Used:</label
+        >
+        <select name="languages" id="languages" multiple size="8">
+          <option value="htmlcss">HTML CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="nodejs">Node.js</option>
+          <option value="express">Express</option>
+          <option value="ejs">EJS</option>
+          <option value="pug">PUG</option>
+          <option value="mongodb">MongoDB</option>
+          <option value="react">React</option>
+          <option value="angular">Angular</option>
+          <option value="sql">SQL</option>
+          <option value="postgresql">PostgreSQL</option>
+          <option value="python">Python</option>
+          <option value="django">Django</option>
+          <option value="flask">Flask</option>
+          <option value="vscode">VS Code</option>
+          <option value="figma">Figma</option>
+          <option value="framer">Framer</option>
+          <option value="reactnative">React Native</option>
+        </select>
+      </div>
+      <!-- Project links -->
+      <label class="small-para" for="website">Project Website Link</label>
+      <input
+        type="url"
+        name="website"
+        class="input"
+        placeholder="https://example.com"
+      />
+
+      <button type="submit" class="btn">Submit Blog</button>
+    </form>
+  </div>
+</div>
+
+<%- include('./layouts/footer-section') %>

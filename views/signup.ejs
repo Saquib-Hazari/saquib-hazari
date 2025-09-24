@@ -1,0 +1,20 @@
+<%- include('./layouts/links') %> <%- include('./layouts/navbar') %>
+
+<div class="form-container">
+  <form class="form" action="/api/user/signup" method="POST">
+    <h1 class="heading2">Sign Up</h1>
+    <input class="input" type="text" name="name" placeholder="Enter fullname" />
+    <input class="input" type="text" name="email" placeholder="Enter email" />
+    <input
+      class="input"
+      type="text"
+      name="password"
+      placeholder="Enter password"
+    />
+    <p class="para">⛔ Admins & mods may view this page</p>
+    <button type="Submit" class="btn">SignUp</button>
+    <a href="/api/user/login">Login User</a>
+  </form>
+</div>
+
+<%- include('./layouts/footer-section') %>

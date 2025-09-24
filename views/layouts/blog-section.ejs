@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="blog-section">
+    <div class="container-flex">
+      <%- include('blog-img-section') %>
+
+      <div class="right-section">
+        <!-- Languages Section -->
+        <% if (blog.languages && blog.languages.length > 0) { %>
+        <div class="small-para">
+          <div class="heading3">Technologies</div>
+
+          <% blog.languages.forEach(lang => { %>
+          <span class="lang">
+            <% if (lang === "html") { %>
+            <div class="btn-explore">
+              <i class="fa-brands fa-html5"></i> HTML
+            </div>
+            <% } %> <% if (lang === "css") { %>
+            <div class="btn-explore">
+              <i class="fa-brands fa-css3-alt"></i> CSS
+            </div>
+            <% } %> <% if (lang === "javascript") { %>
+            <div class="btn-explore">
+              <i class="fa-brands fa-js"></i> JavaScript
+            </div>
+            <% } %> <% if (lang === "nodejs") { %>
+            <div class="btn-explore">
+              <i class="fa-brands fa-node"></i> Node.js
+            </div>
+            <% } %> <% if (lang === "express") { %>
+            <div class="btn-explore">
+              <i class="fa-solid fa-server"></i> Express
+            </div>
+            <% } %> <% if (lang === "ejs") { %>
+            <div class="btn-explore"><i class="fa-solid fa-code"></i> EJS</div>
+            <% } %> <% if (lang === "mongodb") { %>
+            <div class="btn-explore">
+              <i class="fa-solid fa-database"></i> MongoDB
+            </div>
+            <% } %> <% if (lang === "react") { %>
+            <div class="btn-explore">
+              <i class="fa-brands fa-react"></i> React
+            </div>
+            <% } %> <% if (lang === "sql") { %>
+            <div class="btn-explore">
+              <i class="fa-solid fa-database"></i> SQL
+            </div>
+            <% } %> <% if (lang === "sql") { %>
+            <div class="btn-explore">
+              <i class="fa-solid fa-database"></i> PostgreSQL
+            </div>
+            <% } %> <% if (lang === "python") { %>
+            <div class="btn-explore">
+              <i class="fa-brands fa-python"></i> Python
+            </div>
+            <% } %> <% if (lang === "figma") { %>
+            <div class="btn-explore">
+              <i class="fa-brands fa-figma"></i> Figma
+            </div>
+            <% } %>
+          </span>
+          <% }) %>
+        </div>
+        <% } %>
+
+        <!-- Tools Section -->
+        <% if (blog.tools && blog.tools.length > 0) { %>
+        <div class="tools-used">
+          <div class="heading3">Tools</div>
+          <% blog.tools.forEach(tool => { %> <% if (tool === "git") { %>
+          <i class="fa-brands fa-git-alt btn-explore"></i>
+          <% } else if (tool === "docker") { %>
+          <i class="fa-brands fa-docker"></i>
+          <% } %> <% }) %>
+        </div>
+        <% } %>
+
+        <!-- Compatibility Section -->
+        <div class="heading3">
+          Compatibility
+          <div class="small-para">
+            <i class="fa-brands fa-apple"></i><span> macOS</span>
+          </div>
+          <div class="small-para">
+            <i class="fa-brands fa-windows"></i><span> Windows</span>
+          </div>
+        </div>
+
+        <!-- Website Link -->
+        <% if (blog.website) { %>
+        <div class="project-link">
+          <div class="heading3">Source code</div>
+
+          <a
+            href="<%= blog.website %>"
+            target="_blank"
+            class="small-para btn-explore"
+          >
+            <i class="fa-brands fa-github"></i> Visit Source 🚀
+          </a>
+        </div>
+        <% } %>
+
+        <!-- People View Section -->
+        <% if ( relatedBlogs && relatedBlogs.length>0) { %>
+
+        <div class="people-view">
+          <img src="" alt="" />
+          <div class="heading3">People also view</div>
+          <% relatedBlogs.forEach(other => { %>
+          <div class="related-blog">
+            <a href="/api/blog/<%= other._id %>" class="heading3">
+              <div class="recommends">
+                <img src="/assets/images/NIck.jpg" class="profile-img" alt="" />
+                <span><%= other.title %></span>
+              </div>
+            </a>
+          </div>
+          <% }) %>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

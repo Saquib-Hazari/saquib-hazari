@@ -1,0 +1,141 @@
+<%- include('search-section') %>
+<div id="projects" class="project-section">
+  <h3>Projects</h3>
+  <p class="para">Explore all my latest Projects.</p>
+  <div class="projects-container">
+    <div class="card-grid">
+      <% blogs.forEach(blog => { %>
+      <div class="cards">
+        <div class="insider">
+          <div>
+            <i class="fa-brands fa-github fa-lg"></i>
+            <span><%= blog.title %></span>
+          </div>
+          <a href="/api/blog/<%= blog._id %>" class="btn-explore">Explore</a>
+        </div>
+
+        <p class="card-para"><%= blog.subtitle %></p>
+
+        <div class="insider">
+          <div class="card-profile">
+            <img
+              class="profile-img"
+              src="<%= blog.user?.avatar || '/assets/images/NIck.jpg' %>"
+              alt="User"
+            /><span><%= blog.user?.name %></span>
+          </div>
+          <p class="heading3">
+            <%= new Date(blog.createdAt).toLocaleDateString("en-US", { year:
+            "numeric", month: "short", day: "numeric" }) %>
+          </p>
+          <div>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-docker"></i>
+            <i class="fa-brands fa-apple"></i>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<script>
+  const showAllBtn = document.getElementById("showAll");
+  const recentBtn = document.getElementById("recentBtn");
+  const projectsContainer = document.querySelector(".projects-container");
+
+  async function fetchProjects(recent) {
+    const res = await fetch(`/?recent=${recent}`);
+    const html = await res.text();
+
+    // Parse the returned HTML and extract only the projects-container innerHTML
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+    const newProjects = doc.querySelector(".projects-container").innerHTML;
+    projectsContainer.innerHTML = newProjects;
+
+    // Update button active state
+    showAllBtn.classList.toggle("active", !recent);
+    recentBtn.classList.toggle("active", recent);
+  }
+
+  showAllBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    fetchProjects(false); // fetch "show all"
+    showAllBtn.classList.add("active");
+    recentBtn.classList.remove("active");
+  });
+
+  recentBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    fetchProjects(true); // fetch recent
+    recentBtn.classList.add("active");
+    showAllBtn.classList.remove("active");
+  });
+</script>
+<script>
+  const searchInput = document.getElementById("searchInput");
+
+  function buildBlogsArray() {
+    return Array.from(document.querySelectorAll(".cards"))
+      .map((card) => ({
+        title: card.querySelector("span").innerText.trim().toLowerCase(),
+        element: card,
+      }))
+      .sort((a, b) => a.title.localeCompare(b.title));
+  }
+
+  let blogsArray = buildBlogsArray();
+
+  // Rebuild blogsArray after projects are fetched dynamically
+  async function fetchProjects(recent) {
+    const res = await fetch(`/?recent=${recent}`);
+    const html = await res.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+    document.querySelector(".projects-container").innerHTML = doc.querySelector(
+      ".projects-container"
+    ).innerHTML;
+
+    // Rebuild the blogs array after DOM changes
+    blogsArray = buildBlogsArray();
+
+    showAllBtn.classList.toggle("active", !recent);
+    recentBtn.classList.toggle("active", recent);
+  }
+
+  // Binary search function
+  function binarySearch(arr, target) {
+    let left = 0,
+      right = arr.length - 1;
+    target = target.toLowerCase();
+
+    while (left <= right) {
+      const mid = Math.floor((left + right) / 2);
+      if (arr[mid].title === target) return arr[mid];
+      if (arr[mid].title < target) left = mid + 1;
+      else right = mid - 1;
+    }
+    return null;
+  }
+
+  // Search on input
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim();
+
+    blogsArray.forEach((blog) => (blog.element.style.display = "none"));
+
+    if (query === "") {
+      blogsArray.forEach((blog) => (blog.element.style.display = "block"));
+      return;
+    }
+
+    const found = binarySearch(blogsArray, query);
+    if (found) {
+      found.element.style.display = "block";
+    } else {
+      console.log("No match found");
+    }
+  });
+</script>

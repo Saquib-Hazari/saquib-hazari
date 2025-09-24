@@ -1,0 +1,13 @@
+/* Designing the contact form */
+.contact .form-container {
+  height: 100vh;
+}
+
+.contact .form {
+  width: 70%;
+}
+
+.contact .input {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}

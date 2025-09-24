@@ -1,0 +1,98 @@
+/* CSS files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --base-color: #0a090b;
+  --white-color: #fff;
+  --gray-color: #aeaeae;
+  --blue-color: #062231;
+  --green-color: #0a4c22;
+  --dark-blue: #17225f;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background-color: var(--base-color);
+  color: var(--white-color);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.container-main {
+  background: url(../assets/images/background\ UI.png) no-repeat center center;
+  background-size: cover;
+  min-height: 60vh;
+}
+
+hr {
+  border: none;
+  height: 0.5px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.heading2 {
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.heading3 {
+  font-size: 12px;
+  color: var(--gray-color);
+  margin: 10px 0px;
+}
+
+.small-para {
+  font-size: 14px;
+  color: var(--white-color);
+}
+
+.profile-img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.blog-img {
+  height: 250px;
+  width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 30px;
+  }
+
+  .heading2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}

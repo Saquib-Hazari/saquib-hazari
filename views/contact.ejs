@@ -1,0 +1,45 @@
+<%- include('./layouts/links') %><%- include('./layouts/navbar') %>
+<div class="container contact">
+  <div class="form-container">
+    <form class="form" action="/api/contact" method="POST">
+      <h1 class="heading2">Contact Me</h1>
+      <p class="para">
+        How can I help you today? Share your project details, and I’ll get back
+        to you.
+      </p>
+      <input
+        type="text"
+        class="input"
+        name="email"
+        placeholder="Your email address"
+        required
+      />
+      <input
+        type="text"
+        class="input"
+        name="subject"
+        placeholder="Your Subject"
+        required
+      />
+
+      <select class="input" name="category" required>
+        <option value="" disabled selected>Select a Category</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Portfolio Development">Portfolio Development</option>
+        <option value="Backend Development">Backend Development</option>
+        <option value="Frontend Development">Frontend Development</option>
+      </select>
+
+      <textarea
+        type="text"
+        class="input"
+        name="message"
+        rows="6"
+        placeholder="Description"
+        required
+      ></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+<%- include('./layouts/footer-section') %>
