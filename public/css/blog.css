@@ -104,10 +104,12 @@
 .description pre {
   background-color: #2d2d2d;
   color: #f1f1f1;
-  padding: 2rem 2rem;
+  padding: 2rem;
   border-radius: 10px;
   font-family: "Fira Code", monospace;
   margin-bottom: 20px;
+  overflow-wrap: break-word; ß
+  white-space: pre-wrap; ß
 }
 .description img {
   max-width: 100%;
