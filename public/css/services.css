@@ -115,11 +115,28 @@
 }
 
 @media (max-width: 992px) {
+  .service-container h1 {
+    font-size: 50px;
+  }
+
   .service-container {
     margin: 10rem auto;
+  }
+
+  .general {
+    min-height: 600px;
+    width: 370px;
   }
   .pricing {
     display: flex;
     flex-direction: column;
+  }
+
+  .faq-section h3 {
+    font-size: 15px;
+  }
+
+  #frontend-development h2 {
+    font-size: 25px;
   }
 }
