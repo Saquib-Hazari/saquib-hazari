@@ -9,7 +9,7 @@ This portfolio showcases my projects, highlighting my skills in **React, Tailwin
 Let's build something amazing together! 🚀
 
 ## Website Link:
-[](www.saquibhazari.fun)
+[Visit my website](https://www.saquibhazari.fun)
 
 ---
 
