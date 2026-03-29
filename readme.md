@@ -7,11 +7,11 @@ With experience in
   • interactive UI design
   • data-driven solutions**, I build applications that are not only functional but also visually appealing.
 
-This portfolio showcases my projects, highlighting my skills in 
-**• React
-  • TailwindCSS, 
-  • Java, 
-  • Spring boot, 
+This portfolio showcases my projects, highlighting my skills in \n
+**• React \n
+  • TailwindCSS 
+  • Java
+  • Spring boot
   • Javascript/ Typescript
   • SQL**
   Whether you're looking for custom web solutions or advice on bringing your ideas to life, I'm here to make it happen.
