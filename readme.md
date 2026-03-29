@@ -2,14 +2,24 @@
 
 Hi! I'm **Saquib Hazari**, a passionate web developer and data enthusiast. I specialize in **user-friendly, engaging, and intuitive web applications** that connect with users and help businesses achieve their goals.
 
-With experience in **full-stack development, interactive UI design, and data-driven solutions**, I build applications that are not only functional but also visually appealing.
+With experience in 
+**• full-stack development
+  • interactive UI design
+  • data-driven solutions**, I build applications that are not only functional but also visually appealing.
 
-This portfolio showcases my projects, highlighting my skills in **React, TailwindCSS, Java, Spring boot, Javascript/ Typescript and more**. Whether you're looking for custom web solutions or advice on bringing your ideas to life, I'm here to make it happen.
+This portfolio showcases my projects, highlighting my skills in 
+**• React
+  • TailwindCSS, 
+  • Java, 
+  • Spring boot, 
+  • Javascript/ Typescript
+  • SQL**
+  Whether you're looking for custom web solutions or advice on bringing your ideas to life, I'm here to make it happen.
 
 Let's build something amazing together! 🚀
 
 ## Website Link:
-[Visit my website](https://www.saquibhazari.fun)
+[Visit my website](https://react-frontend-zlql.vercel.app/)
 
 ---
 
