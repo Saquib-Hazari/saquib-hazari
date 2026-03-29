@@ -1,29 +1,87 @@
-# Introduction
+# 👋 Hi, I'm Saquib Hazari
 
-Hi! I'm **Saquib Hazari**, a passionate web developer and data enthusiast. I specialize in **user-friendly, engaging, and intuitive web applications** that connect with users and help businesses achieve their goals.
+🚀 Full Stack Developer | Backend-Focused Engineer | Java & Spring Boot  
 
-With experience in 
-**• full-stack development
-  • interactive UI design
-  • data-driven solutions**, I build applications that are not only functional but also visually appealing.
-
-This portfolio showcases my projects, highlighting my skills in \n
-**• React \n
-  • TailwindCSS 
-  • Java
-  • Spring boot
-  • Javascript/ Typescript
-  • SQL**
-  Whether you're looking for custom web solutions or advice on bringing your ideas to life, I'm here to make it happen.
-
-Let's build something amazing together! 🚀
-
-## Website Link:
-[Visit my website](https://react-frontend-zlql.vercel.app/)
+I build **scalable web applications** with a strong focus on **performance, clean architecture, and user experience**.  
+Passionate about solving real-world problems through efficient backend systems and intuitive frontends.
 
 ---
 
-### Connect with Me
+## 🧠 About Me
 
-[![https://www.linkedin.com/in/saquib-hazari/](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin/)  
-[![https://x.com/saquib7298](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/your-twitter/)
+- 💻 Full-stack developer with a backend-first approach  
+- ⚙️ Focused on building **high-performance APIs and scalable systems**  
+- 📊 Interested in **data-driven applications and optimization**  
+- 🌱 Continuously learning system design, cloud, and performance engineering  
+
+---
+
+## 🛠 Tech Stack
+
+### 🚀 Backend
+- Java, Spring Boot  
+- REST APIs, Microservices  
+- SQL (MySQL / PostgreSQL)  
+
+### 🎨 Frontend
+- React  
+- TailwindCSS  
+- JavaScript / TypeScript  
+
+### ⚙️ Tools & Technologies
+- Git & GitHub  
+- Docker (basic)  
+- Postman  
+- Vercel / Render  
+
+---
+
+## 🚀 Featured Project
+
+### 📝 Scalable Blog Platform
+
+A full-stack blog application focused on performance and scalability.
+
+#### 🔧 Tech Stack:
+- Backend: Java, Spring Boot  
+- Frontend: React, TailwindCSS  
+- Database: SQL  
+
+#### ⚡ Key Features:
+- RESTful API with pagination  
+- Optimized database queries  
+- Clean UI with responsive design  
+
+#### 🚀 Performance Improvements:
+- Implemented caching to reduce API response time  
+- Solved cold start issues on deployment  
+- Improved backend efficiency for faster data retrieval  
+
+🔗 **Live Demo:** https://react-frontend-zlql.vercel.app/  
+🔗 **Source Code:** (Add your GitHub repo link here)
+
+---
+
+## 📈 What I Bring
+
+- Strong understanding of backend architecture  
+- Ability to optimize performance and reduce latency  
+- Clean, maintainable, and scalable code practices  
+- Problem-solving mindset with real-world project experience  
+
+---
+
+## 🌐 Portfolio
+
+🔗 https://react-frontend-zlql.vercel.app/
+
+---
+
+## 🤝 Connect with Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saquib-hazari/)  
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/saquib7298)
+
+---
+
+⭐ *Always open to opportunities, collaborations, and interesting problems to solve!*
