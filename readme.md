@@ -13,13 +13,7 @@ I build scalable web applications with a focus on **performance, clean APIs, and
 - SQL  
 
 ---
-
-## 🚀 Project
-### 📝 Blog Platform
-- Built with Spring Boot + React  
-- Implemented caching for faster API responses  
-- Optimized backend performance  
-
+**Link**:
 🔗 https://react-frontend-zlql.vercel.app/
 
 ---
