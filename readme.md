@@ -3,8 +3,8 @@
 🚀 Full Stack Developer | Java, Spring Boot, React  
 
 I build scalable web applications with a focus on **performance, clean APIs, and user experience**.
-
----
+**Link**:
+🔗 https://react-frontend-zlql.vercel.app/
 
 ## 🛠 Tech Stack
 - Java, Spring Boot  
@@ -12,12 +12,7 @@ I build scalable web applications with a focus on **performance, clean APIs, and
 - JavaScript / TypeScript  
 - SQL  
 
----
-**Link**:
-🔗 https://react-frontend-zlql.vercel.app/
-
----
-
 ## 🤝 Connect
 [LinkedIn](https://www.linkedin.com/in/saquib-hazari/)  
 [Twitter](https://x.com/saquib7298)
+[My Website](https://react-frontend-zlql.vercel.app/)
